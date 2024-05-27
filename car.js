@@ -4,6 +4,18 @@ class Car{
         this.y = y;
         this.width = width;
         this.height = height;
+
+        this.controls = new controls();
+    }
+
+    update(){
+        if(this.controls.forward){
+            this.y -= 2;
+        }
+        if(this.controls.backward){
+            this.y += 2;
+        }
+        
     }
     draw(ctx){
         ctx.beginPath();
